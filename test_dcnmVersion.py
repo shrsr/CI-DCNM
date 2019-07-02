@@ -5,7 +5,7 @@ import json
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 class MyTestCase(unittest.TestCase):
-# Sample
+# Sample 8
     def test_version(self):
         requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         f = FabricList()
