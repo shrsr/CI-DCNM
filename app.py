@@ -11,11 +11,11 @@ class FabricList():
     def __init__(self):
         self.headers = {'Accept': 'application/json',
                         'Content-Type': 'application/json; charset=UTF-8'}
-        self.expirationTime = 999999
+        self.expirationTime = 999999999999
 
     def login(self):
         payload = {'expirationTime': self.expirationTime}
-        response = requests.post('https://10.60.0.191/rest/logon', auth=HTTPBasicAuth('admin', 'Cisco12345'),
+        response = requests.post('https://172.25.74.49/rest/logon', auth=HTTPBasicAuth('admin', 'Cisco12345!'),
                              headers=self.headers, data=json.dumps(payload), verify=False)
         dcnm_token = json.loads(response.text)['Dcnm-Token']
         self.headers = (json.loads(response.text))
@@ -24,12 +24,12 @@ class FabricList():
 
 
     def getFabricList(self):
-        response = requests.get('https://10.60.0.191/rest/control/fabrics', auth=HTTPBasicAuth('admin', 'Cisco12345'),
+        response = requests.get('https://172.25.74.49/rest/control/fabrics', auth=HTTPBasicAuth('admin', 'Cisco12345!'),
                                 headers=self.headers, verify=False)
         print(response.content)
 
     def getDCNMVersion(self):
-        response = requests.get('https://10.60.0.191/rest/dcnm-version', auth=HTTPBasicAuth('admin', 'Cisco12345'),
+        response = requests.get('https://172.25.74.49/rest/dcnm-version', auth=HTTPBasicAuth('admin', 'Cisco12345!'),
                                 headers=self.headers, verify=False)
         print(response.content)
         return response.text
@@ -42,7 +42,7 @@ class FabricList():
             read_txt = read_txt.replace('\"\"False\"\"', '\"False\"')
             read_txt = read_txt.replace('True', '\"True\"')
             payloadFromFabric = json.loads(read_txt.rstrip())
-            response = requests.post('https://10.60.0.191/rest/control/fabrics', auth=HTTPBasicAuth('admin', 'Cisco12345'),headers=hdr,
+            response = requests.post('https://172.25.74.49/rest/control/fabrics', auth=HTTPBasicAuth('admin', 'Cisco12345!'),headers=hdr,
                                  data=json.dumps(payloadFromFabric),verify=False)
         #print(response.content)
         #return response.text
@@ -77,7 +77,7 @@ class FabricList():
         }
 
         hdr = {'Dcnm-Token': dcnm_token, 'Content-Type': 'application/json'}
-        responseSpine = requests.post('https://10.60.0.191/rest/control/fabrics/CICD/inventory/discover',
+        responseSpine = requests.post('https://172.25.74.49/rest/control/fabrics/CICD/inventory/discover',
                                       data=json.dumps(payloadSpine),
                                       headers=hdr,
                                       verify=False)
@@ -114,7 +114,7 @@ class FabricList():
 
 
 
-        responseLeaf1 = requests.post('https://10.60.0.191/rest/control/fabrics/CICD/inventory/discover',
+        responseLeaf1 = requests.post('https://172.25.74.49/rest/control/fabrics/CICD/inventory/discover',
                                  data=json.dumps(payloadLeaf1),
                                  headers=hdr,
                                  verify=False)
@@ -146,7 +146,7 @@ class FabricList():
             ]
         }
 
-        responseLeaf2 = requests.post('https://10.60.0.191/rest/control/fabrics/CICD/inventory/discover',
+        responseLeaf2 = requests.post('https://172.25.74.49/rest/control/fabrics/CICD/inventory/discover',
                                       data=json.dumps(payloadLeaf2),
                                       headers=hdr,
                                       verify=False)
@@ -161,4 +161,3 @@ if __name__ == "__main__":
     fabricL.getDCNMVersion()
     fabricL.create_easy_fabric(fabricL.login())
     fabricL.import_switches(fabricL.login())
-
