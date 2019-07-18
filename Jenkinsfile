@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker { image 'gsshreyas/ci:latest' } }
+
   stages {
     stage('build') {
       steps {
