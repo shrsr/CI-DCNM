@@ -7,7 +7,7 @@ pipeline {
       script {
                    env.RELEASE_SCOPE = input message: 'Enter Fabric', ok: 'Release!',
 
-                }
+
                 echo "${env.RELEASE_SCOPE}"
             }
     }
