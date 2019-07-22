@@ -40,12 +40,13 @@ pipeline {
 
   success {
 
-           git url: "https://wwwin-github.cisco.com/ssrish/Experiment.git",
-           credentialsId: 'Jenkins',
-           branch: master
-           sh '''git merge master'''
-           sh '''git commit -m "TEST"'''
-           sh '''git push origin master'''
+
+
+           sshagent(credentials: ["d7:47:30:23:d8:f3:49:37:4a:8d:d3:d8:a0:32:fc:1b"]) {
+                                   def repository = https://wwwin-github.cisco.com/ssrish/Experiment.git
+                                   sh '''git merge master'''
+                                   sh '''git push origin master'''
+                                   }
     }
 
 
