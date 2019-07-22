@@ -10,7 +10,7 @@ class MyTestCase(unittest.TestCase):
         requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         f = FabricList()
         data = json.loads(f.getDCNMVersion())
-        assert data["Dcnm-Version"] == "11.2(0)"
+        assert data["Dcnm-Version"] == "11.2(1)"
 
 if __name__ == '__main__':
     unittest.main()
