@@ -13,7 +13,7 @@ pipeline {
       }
     }
 
-  stage('Test for DCNM's Latest Version') {
+  stage('Validate Latest Version Of DCNM') {
 
   steps {
   sh '''
