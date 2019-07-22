@@ -34,5 +34,20 @@ pipeline {
 
       }
     }
+
+  post {
+  success {
+          git url: "https://wwwin-github.cisco.com/ssrish/CI.git",
+           credentialsId: 'jenkins_ssh_key',
+           branch: develop
+           sh 'git tag -a tagName -m "Your tag comment"'
+           sh 'git merge develop'
+           sh 'git commit -am "Merged develop branch to master'
+           sh "git push origin master"
+  }
+  failure {
+    mail to: ssrish@cisco.com, subject: 'The Pipeline failed :('
+}
+}
   }
 }
