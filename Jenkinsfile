@@ -35,8 +35,9 @@ pipeline {
       }
     }
   stage('Develop'){
-  post {
   steps{
+  post {
+
   success {
           git url: "https://wwwin-github.cisco.com/ssrish/CI.git",
            credentialsId: 'jenkins_ssh_key',
