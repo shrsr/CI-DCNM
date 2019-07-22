@@ -34,7 +34,7 @@ pipeline {
 
       }
     }
-
+  stage('Develop')
   post {
   success {
           git url: "https://wwwin-github.cisco.com/ssrish/CI.git",
@@ -51,4 +51,5 @@ pipeline {
 
     }
   }
+}
 }
