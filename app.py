@@ -18,7 +18,7 @@ class FabricList():
         #self.fabric = input("Enter name for Fabric: ")
         #self.vrf = input("Enter name for VRF: ")
         #self.network = input("Enter name for Network: ")
-        self.fabric = "Fab"
+        self.fabric = "F"
         self.vrf = "V"
         self.network = "N"
 
