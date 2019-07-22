@@ -18,9 +18,9 @@ class FabricList():
         #self.fabric = input("Enter name for Fabric: ")
         #self.vrf = input("Enter name for VRF: ")
         #self.network = input("Enter name for Network: ")
-        self.fabric = "Fabric"
-        self.vrf = "myVrf"
-        self.network = "myNet"
+        self.fabric = "F"
+        self.vrf = "V"
+        self.network = "N"
 
     def login(self):
         payload = {'expirationTime': self.expirationTime}
@@ -130,7 +130,7 @@ class FabricList():
                                  data=body,
                                  headers=headers,
                                  verify=False)
-
+        print("Dun")
 
     def save_fabric(self,dcnm_token):
         hdr = {'Dcnm-Token': dcnm_token, 'Content-Type': 'application/json'}
@@ -138,7 +138,7 @@ class FabricList():
         responseConfig = requests.post(postURL,
                                        headers=hdr,
                                        verify=False)
-
+        print("Sav")
     def deploy_fabric(self, dcnm_token):
         hdr = {'Dcnm-Token': dcnm_token, 'Content-Type': 'application/json'}
         forceShowRun=False
@@ -146,6 +146,7 @@ class FabricList():
         responseConfig = requests.post(postURL,
                                       headers=hdr,
                                       verify=False)
+        print("DepDon")
 
 
     #CICD if fabricname is same then and only then push VRF to new switch
@@ -166,6 +167,7 @@ class FabricList():
                     data=json.dumps(payload),
                     headers=hdr,
                     verify=False)
+        print("C")
 
 
 
@@ -186,39 +188,6 @@ class FabricList():
                                  headers=hdr,
                                  verify=False)
 
-    def attachNetwork(self, dcnm_token):
-        postURL=self.url + '/rest/top-down/fabrics/' + self.fabric + '/networks/'+self.fabric+'/attachments'
-        payload={
-
-                "fabric": self.fabric,
-                "networkName": self.network,
-                "serialNumber": "9NCHKKHXDBN",
-                "switchPorts": "",
-                "detachSwitchPorts": "",
-                "vlan": 100,
-                "dot1QVlan": 1,
-                "untagged": False,
-                "deployment": True,
-                "extensionValues": "",
-                "instanceValues": "",
-                "freeformConfig": ""
-
-
-        }
-        headers = {'Dcnm-Token': dcnm_token, 'Content-Type': 'application/json'}
-        response = requests.post(postURL,
-                                 data=json.dumps(payload),
-                                 headers=headers,
-                                 verify=False)
-
-
-        postURL = self.url + '/rest/top-down/fabrics/' + self.fabric + '/vrfs/attachments'
-        headers = {'Dcnm-Token': dcnm_token, 'Content-Type': 'application/json'}
-        response = requests.post(postURL,
-                                 data=json.dumps(payload),
-                                 headers=headers,
-                                 verify=False)
-        print(response)
 
     def attach_network(self, dcnm_token):
 
