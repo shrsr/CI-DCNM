@@ -13,7 +13,7 @@ pipeline {
       }
     }
 
-  stage('Test version of DCNM') {
+  stage('Test for DCNM's Latest Version') {
 
   steps {
   sh '''
@@ -24,7 +24,7 @@ pipeline {
   }
 }
 
-    stage('Test network ') {
+    stage('Test Network's Deplyement Status') {
 
       steps {
         sh '''

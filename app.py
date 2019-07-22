@@ -15,9 +15,12 @@ class FabricList():
         self.expirationTime = 999999999
         self.url = 'https://172.25.74.49'
         self.auth = HTTPBasicAuth('admin', 'Cisco12345!')
-        self.fabric = input("Enter name for Fabric: ")
-        self.vrf = input("Enter name for VRF: ")
-        self.network = input("Enter name for Network: ")
+        #self.fabric = input("Enter name for Fabric: ")
+        #self.vrf = input("Enter name for VRF: ")
+        #self.network = input("Enter name for Network: ")
+        self.fabric = "Fabric"
+        self.vrf = "myVrf"
+        self.network = "myNet"
 
     def login(self):
         payload = {'expirationTime': self.expirationTime}
