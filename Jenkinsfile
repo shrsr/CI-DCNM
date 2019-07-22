@@ -24,7 +24,7 @@ pipeline {
   }
 }
 
-    stage('Test Network's Deplyement Status') {
+    stage('Test Network Deplyement Status') {
 
       steps {
         sh '''
