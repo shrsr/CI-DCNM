@@ -1,0 +1,9 @@
+{
+            "fabric": self.fabric,
+            "networkName": self.network,
+            "networkId": 1,
+            "networkTemplate": "Default_Network_Universal",
+            "networkExtensionTemplate": "Default_Network_Extension_Universal",
+            "networkTemplateConfig": "{\"suppressArp\":\"false\",\"secondaryGW2\":\"\",\"secondaryGW1\":\"\",\"loopbackId\":\"\",\"vlanId\":\"100\",\"gatewayIpAddress\":\"\",\"enableL3OnBorder\":\"false\",\"networkName\":\"N\",\"vlanName\":\"\",\"enableIR\":\"false\",\"mtu\":\"\",\"rtBothAuto\":\"false\",\"isLayer2Only\":\"false\",\"intfDescription\":\"\",\"segmentId\":\"1\",\"mcastGroup\":\"239.1.1.0\",\"gatewayIpV6Address\":\"\",\"dhcpServerAddr2\":\"\",\"trmEnabled\":\"false\",\"dhcpServerAddr1\":\"\",\"tag\":\"12345\",\"nveId\":\"1\",\"vrfDhcp\":\"\",\"vrfName\":\"V\"}",
+            "vrf": self.vrf
+        }

@@ -1,0 +1,26 @@
+{
+        "seedIP": "172.25.74.58",
+        "snmpV3AuthProtocol": 0,
+        "username": "admin",
+        "password": "Cisco123!",
+        "maxHops": 2,
+        "cdpSecondTimeout": 0,
+        "preserveConfig": False,
+        "switches": [
+        {
+            "reachable": True,
+            "auth": True,
+            "known": True,
+            "valid": True,
+            "selectable": True,
+            "sysName": "leaf",
+            "ipaddr": "172.25.74.58",
+            "platform": "N9K-9000v",
+            "version": "9.2(3)",
+            "lastChange": "",
+            "hopCount": 0,
+            "deviceIndex": "leaf(9NCHKKHXDBN)",
+            "statusReason": ""
+        }
+            ]
+        }

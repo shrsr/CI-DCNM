@@ -1,0 +1,21 @@
+[
+            {
+            "networkName": self.network,
+            "lanAttachList": [
+            {
+            "fabric": self.fabric,
+            "networkName": self.network,
+            "serialNumber": "9NCHKKHXDBN",
+            "switchPorts": "",
+            "detachSwitchPorts": "",
+            "vlan": 100,
+            "dot1QVlan": 1,
+            "untagged": False,
+            "deployment": True,
+            "extensionValues": "",
+            "instanceValues": "",
+            "freeformConfig": ""
+            }
+            ]
+            }
+            ]

@@ -1,0 +1,8 @@
+{
+     "fabric": self.fabric,
+            "vrfName": self.vrf,
+            "vrfTemplate": "Default_VRF_Universal",
+            "vrfExtensionTemplate": "Default_VRF_Extension_Universal",
+            "vrfTemplateConfig": "{\"advertiseDefaultRouteFlag\":\"true\",\"vrfVlanId\":\"\",\"isRPExternal\":\"false\",\"vrfDescription\":\"\",\"L3VniMcastGroup\":\"239.1.1.0\",\"maxBgpPaths\":\"1\",\"maxIbgpPaths\":\"2\",\"vrfSegmentId\":\"50000\",\"ipv6LinkLocalFlag\":\"true\",\"mtu\":\"9216\",\"multicastGroup\":\"\",\"vrfRouteMap\":\"FABRIC-RMAP-REDIST-SUBNET\",\"configureStaticDefaultRouteFlag\":\"true\",\"advertiseHostRouteFlag\":\"false\",\"vrfVlanName\":\"\",\"trmEnabled\":\"false\",\"loopbackNumber\":\"\",\"tag\":\"12345\",\"rpAddress\":\"\",\"nveId\":\"1\",\"asn\":\"65000\",\"vrfIntfDescription\":\"\",\"vrfName\":\"V\"}",
+            "vrfId": 50000
+            }
