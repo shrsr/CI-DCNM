@@ -50,7 +50,7 @@ pipeline {
     }
   failure {
 
-         mail
+         mail to
             {to: ssrish@cisco.com, subject: 'The Pipeline failed :('
     }
 
