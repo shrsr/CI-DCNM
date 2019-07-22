@@ -38,7 +38,7 @@ pipeline {
   steps{
 
 
-  success {
+
 
 
 
@@ -47,7 +47,7 @@ pipeline {
                                    sh '''git merge master'''
                                    sh '''git push origin master'''
                                    }
-    }
+
 
 
 
