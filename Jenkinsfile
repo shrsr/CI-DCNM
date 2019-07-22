@@ -2,12 +2,6 @@ pipeline {
   agent { docker { image 'gsshreyas/ci:latest' } }
   stages {
 
-  stage('Input') {
-
-  steps {
-    echo "User: ${username} said Ok."
-}
-}
 
 
     stage('build') {
