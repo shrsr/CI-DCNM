@@ -11,6 +11,7 @@ pipeline {
                 echo "${env.RELEASE_SCOPE}"
             }
     }
+}
 
 
     stage('build') {
