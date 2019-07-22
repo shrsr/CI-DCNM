@@ -48,11 +48,7 @@ pipeline {
            sh 'git commit -am "Merged develop branch to master'
            sh "git push origin master"
     }
-  failure {
 
-         mail to
-            {to: ssrish@cisco.com, subject: 'The Pipeline failed :('
-    }
 
     }
   }
