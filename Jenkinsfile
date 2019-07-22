@@ -41,7 +41,7 @@ pipeline {
   success {
 
            git url: "https://wwwin-github.cisco.com/ssrish/CI.git",
-           credentialsId: 'jenkins_ssh_key',
+           credentialsId: 'FromJenkins',
            branch: develop
            sh 'git tag -a tagName -m "Your tag comment"'
            sh 'git merge develop'
@@ -50,7 +50,8 @@ pipeline {
     }
   failure {
 
-         mail(to: 'ssrish@cisco.com', subject: 'The Pipeline failed :(')
+         mail
+            {to: 'ssrish@cisco.com', subject: 'The Pipeline failed :('
     }
 
     }
