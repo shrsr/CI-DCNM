@@ -39,6 +39,7 @@ pipeline {
   post {
 
   success {
+
            git url: "https://wwwin-github.cisco.com/ssrish/CI.git",
            credentialsId: 'jenkins_ssh_key',
            branch: develop
@@ -49,7 +50,7 @@ pipeline {
     }
   failure {
 
-          to: 'ssrish@cisco.com', subject: 'The Pipeline failed :('
+         mail(to: 'ssrish@cisco.com', subject: 'The Pipeline failed :(')
     }
 
     }
