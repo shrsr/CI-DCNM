@@ -3,13 +3,7 @@ pipeline {
   stages {
 
   stage('Input') {
-  input{
-  message "Press Ok to continue"
-  submitter "user1,user2"
-  parameters {
-    string(name:'username', defaultValue: 'user', description: 'Username of the user pressing Ok')
-  }
-  }
+
   steps {
     echo "User: ${username} said Ok."
 }
@@ -24,7 +18,20 @@ pipeline {
 
       }
     }
-    stage('test') {
+
+  stage('Test version of DCNM') {
+
+  steps {
+  sh '''
+    . virtual/bin/activate
+    python3 test_dcnmVersion.py
+      '''
+
+  }
+}
+
+    stage('Test network ') {
+
       steps {
         sh '''
             . virtual/bin/activate
