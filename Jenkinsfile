@@ -40,18 +40,12 @@ pipeline {
 
 
 
+withCredentials([sshUserPrivateKey(credentialsId: '<credential-id>', keyFileVariable: 'SSH_KEY')]) {
+          sh("git push origin <local-branch>:<remote-branch>")
+}
 
 
-           sshagent(credentials: ["d7:47:30:23:d8:f3:49:37:4a:8d:d3:d8:a0:32:fc:1b"]) {
-
-                                   sh '''git merge master'''
-                                   sh '''git push origin master'''
-                                   }
-
-
-
-
-  }
+}
 }
 }
 }
