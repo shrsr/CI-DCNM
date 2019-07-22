@@ -36,7 +36,7 @@ pipeline {
     }
   stage('Develop'){
   steps{
-  post {
+
 
   success {
 
@@ -49,7 +49,7 @@ pipeline {
     }
 
 
-    }
+
   }
 }
 }
