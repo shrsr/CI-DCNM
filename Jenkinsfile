@@ -40,13 +40,13 @@ pipeline {
 
   success {
 
-           git url: "https://wwwin-github.cisco.com/ssrish/CI.git",
+           git url: "https://wwwin-github.cisco.com/ssrish/Experiment.git",
            credentialsId: 'FromJenkins',
-           branch: develop
+           branch: master
            sh 'git tag -a tagName -m "Your tag comment"'
-           sh 'git merge develop'
-           sh 'git commit -am "Merged develop branch to master'
-           sh "git push origin master"
+           sh '''git merge master'''
+           sh '''git commit -m "TEST"'''
+           sh '''git push origin master'''
     }
 
 
