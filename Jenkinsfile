@@ -51,7 +51,7 @@ pipeline {
   failure {
 
          mail
-            {to: 'ssrish@cisco.com', subject: 'The Pipeline failed :('
+            {to: ssrish@cisco.com, subject: 'The Pipeline failed :('
     }
 
     }
