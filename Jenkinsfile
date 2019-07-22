@@ -44,10 +44,10 @@ pipeline {
            sh 'git merge develop'
            sh 'git commit -am "Merged develop branch to master'
            sh "git push origin master"
-  }
+    }
   failure {
-    mail to: ssrish@cisco.com, subject: 'The Pipeline failed :('
-}
-}
+      mail to: ssrish@cisco.com, subject: 'The Pipeline failed :('
+    }
+
+    }
   }
-}
