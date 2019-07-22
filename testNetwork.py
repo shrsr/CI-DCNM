@@ -5,7 +5,7 @@ import json
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 class NetworkTestCase(unittest.TestCase):
-# Sample run 2
+# Sample run
     def testNetwork(self):
         requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         fabric = FabricList()
