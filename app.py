@@ -149,7 +149,7 @@ class FabricList():
         print("DepDon")
 
 
-    #CICD if fabricname is same then and only then push VRF to new switch
+    #CICD if fabricname is same then and only then push
     def createVRF(self,dcnm_token):
 
         postURL = self.url + '/rest/top-down/fabrics/' + self.fabric + '/vrfs'
