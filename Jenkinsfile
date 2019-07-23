@@ -41,6 +41,9 @@ pipeline {
 
 
 withCredentials([sshUserPrivateKey(credentialsId: 'ssrish', keyFileVariable: 'SSH_KEY')]) {
+sh("git init")
+sh("git add .")
+sh("git commit -m "message"")
  sh("git remote remove origin")
   sh("git remote add origin https://github.com/ssrish/Experiment.git")
   sh("git push origin master")
