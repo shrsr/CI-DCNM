@@ -43,7 +43,7 @@ pipeline {
 withCredentials([sshUserPrivateKey(credentialsId: 'ssrish', keyFileVariable: 'SSH_KEY')]) {
 
 
-  sh("git push -u origin")
+  sh("git push -u origin HEAD:bob")
 }
 
 
