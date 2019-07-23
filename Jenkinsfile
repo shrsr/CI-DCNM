@@ -46,7 +46,6 @@ sh("git config user.name 'ssrish'")
 sh("git config user.email 'ssrish@cisco.com'")
 sh("git add .")
 sh("git commit -m 'message'")
- sh("git remote remove origin")
   sh("git remote add origin https://github.com/ssrish/Experiment.git")
   sh("git push -u origin master")
 
