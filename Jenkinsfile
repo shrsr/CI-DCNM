@@ -41,7 +41,7 @@ pipeline {
 
 
 withCredentials([sshUserPrivateKey(credentialsId: 'ssrish', keyFileVariable: 'SSH_KEY')]) {
-  sh("git remote rename origin destination")
+  sh("git remote rename destination destinatio")
   sh("git remote add https://github.com/ssrish/Experiment.git")
   sh("git push --set-upstream origin master")
 
