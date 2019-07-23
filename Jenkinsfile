@@ -42,8 +42,8 @@ pipeline {
 
 withCredentials([sshUserPrivateKey(credentialsId: 'ssrish', keyFileVariable: 'SSH_KEY')]) {
 
-  sh("git remote add Re https://github.com/ssrish/Experiment.git")
-  sh("git push ssrish/Experiment.git HEAD:Re")
+  sh("git remote add O https://github.com/ssrish/Experiment.git")
+  sh("git push ssrish/Experiment HEAD:O")
 
 }
 
