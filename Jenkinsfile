@@ -48,7 +48,7 @@ sh("git add .")
 sh("git commit -m 'message'")
  sh("git remote remove origin")
   sh("git remote add origin https://github.com/ssrish/Experiment.git")
-  sh("git push origin master")
+  sh("git push -u origin master")
 
 }
 
